@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide - Home</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="leftSide">
+                <a href="{% url 'homepage' %}"><h1 class="title">NutriGuide</h1></a>
+            </div>
+            <div class="rightSide">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="input-container">
+                        <input type="text" placeholder="Search Fruits" class="searchbar" name="searchbar" id="searchbar">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #858585;" id="searchicon"></i>
+                    </div>
+                </form>
+                <a href="{% url 'addFruit' %}"  class="addFruit">+</a>
+                <a href="{% url 'login' %}" class="userSettings"><i class="fa-solid fa-power-off"></i></a>
+            </div>
+        </nav>
+        <div class="innerContainer">
+            <div class="imageHolder">
+                <img src="{% static 'img/homepage_image.jpg' %}" alt="Fruit Image">
+                <div class="textOverlay">
+                    <h1>Find the right fruit<br>for you!</h1>
+                </div>
+            </div>
+        </div>
+        <div class="fruitsInformation">
+            <h2>Most Popular Fruits</h3>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/apple.jpg' %}" alt="Apple">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Apple</h3>
+                    <p>Calories: 81.0kcal | Fat: 0.0gms | Sugar: 18.0gms | Carbs: 18.0gms | Protein: 0.0gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/banana.jpg' %}" alt="Banana">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Banana</h3>
+                    <p>Calories: 96.0kcal | Fat: 0.2gms | Sugar: 17.2gms | Carbs: 22.0gms | Protein: 1.0gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/grapes.jpg' %}" alt="Grapes">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Grapes</h3>
+                    <p>Calories: 69.0kcal | Fat: 0.16gms | Sugar: 16.0gms | Carbs: 18.1gms | Protein: 0.72gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/strawberry.jpg' %}" alt="Strawberry">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Strawberries</h3>
+                    <p>Calories: 29.0kcal | Fat: 0.4gms | Sugar: 5.4gms | Carbs: 5.5gms | Protein: 0.8gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/kiwi.jpg' %}" alt="Kiwi">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Kiwi</h3>
+                    <p>Calories: 61.0kcal | Fat: 0.5gms | Sugar: 9.0gms | Carbs: 15.0gms | Protein: 1.1gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/peach.jpg' %}" alt="Peach">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Peach</h3>
+                    <p>Calories: 39.0kcal | Fat: 0.25gms | Sugar: 8.4gms | Carbs: 9.5gms | Protein: 0.9gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/pear.jpg' %}" alt="Pear">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Pear</h3>
+                    <p>Calories: 57.0kcal | Fat: 0.1gms | Sugar: 10.0gms | Carbs: 15.0gms | Protein: 0.4gms</p>
+                </div>
+            </div>
+            <div class="fruit">
+                <div class="fruitImage">
+                    <img src="{% static 'img/fruits/orange.jpg' %}" alt="Orange">
+                </div>
+                <div class="fruitInfo">
+                    <h3>Orange</h3>
+                    <p>Calories: 43.0kcal | Fat: 0.2gms | Sugar: 8.2gms | Carbs: 8.3gms | Protein: 1.0gms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/570d6d8240.js" crossorigin="anonymous"></script>
+</body>
+</html>

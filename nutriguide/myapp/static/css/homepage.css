@@ -1,0 +1,190 @@
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    /* font-variation-settings:
+      "slnt" 0; */
+  }
+
+body{
+    margin:0;
+    padding:0;
+    background-color:#74D948;
+}
+
+.container{
+    height:auto;
+    margin-bottom:0;
+    padding:0;
+    width:100%;  
+}
+
+.navbar{
+    margin-top:0;
+    width:100%;
+    height:10%;
+    background-color:white;
+    display:flex;
+}
+
+.leftSide{
+    margin-left:40px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+    margin-right:auto;
+    /* text-align:left; */
+}
+
+.leftSide a{
+    text-decoration:none;
+    color:black;
+}
+
+.title{
+    font-size:30px;
+}
+
+.rightSide{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:40px;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.input-container input[type="text"] {
+    padding-left: 30px;
+}
+  
+.input-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.input-container i:hover{
+    cursor:pointer;
+    color:black;
+}
+
+.searchbar{
+    width:250px;
+    height:30px;
+    border-radius:30px;
+    padding-left:150px;
+    font-size:17px;
+    padding-top:2px;
+    background-color:#B6E3A2;
+    border:none;    
+}
+
+
+.addFruit,.userSettings{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:none; 
+    font-size:20px; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+}
+
+.addFruit{
+    background-color:#74D948;
+    margin:auto 10px;
+    font-weight:bolder;
+    font-size:28px;
+}
+
+.userSettings{
+    background-color:lightgray;
+}
+
+/* Upto navbar. Can copy to other files */
+
+.innerContainer {
+    margin-top:-40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imageHolder {
+    position: relative;
+    text-align: center;
+}
+
+.imageHolder img {
+    border-radius: 20px;
+}
+
+.textOverlay {
+    position: absolute;
+    text-align:right;
+    color:white;
+    bottom: 0;
+    right: 0;
+    /* background-color: rgba(255, 255, 255, 0.8); Semi-transparent white background */
+    padding: 15px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+
+
+.fruitsInformation{
+    width:80%;
+    margin-top:-50px;
+    margin-left:auto;
+    text-align:left;
+    display:block;
+}
+
+.fruitsInformation h2{
+    font-weight:700;
+}
+
+.fruit{
+    display:flex;
+    margin:20px auto;
+}
+
+.fruitImage{
+    width:60px;
+    height:60px;
+    background-color:white;
+    border-radius:10px;
+}
+
+.fruitImage img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.fruitInfo{
+    margin-left:10px;
+    margin-top:-20px;
+}
+
+.fruitInfo h3{
+    font-weight:700;
+    margin-bottom:-10px;
+    margin-top:25px;
+}
+
+
+

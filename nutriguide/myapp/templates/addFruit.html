@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide - Add Fruit</title>
+    <link rel="stylesheet" href="{% static 'css/addFruit.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="leftSide">
+                <a href="{% url 'homepage' %}"><h1 class="title">NutriGuide</h1></a>
+            </div>
+            <div class="rightSide">
+                <!-- <input type="text" class="searchbar" placeholder="Search Fruits"> -->
+                <div class="input-container">
+                    <input type="text" placeholder="Search Fruits" class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #858585;" id="searchicon"></i>
+                  </div>
+                  <a href="{% url 'addFruit' %}"  class="addFruit">+</a>
+                  <a href="{% url 'login' %}" class="userSettings"><i class="fa-solid fa-power-off"></i></a>
+            </div>
+        </nav>
+
+        <div class="innerContainer">
+            <h2 class="description">Add a new fruit</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" class="input-box"><br>
+            
+                <h3 class="nutritionDetails">Nutrition Facts</h3>
+                <!-- Calories -->
+                <div class="overall">
+                    <div class="leftCol">
+                        <label for="cal">Calories</label><br>
+                        <input type="number" id="cal" name="calories" class="input-box-small" step="0.1">
+                    </div>
+                    <div class="rightCol">
+                        <label for="cal100">Per 100g</label><br>
+                        <input type="number" id="cal100" name="calories_100g" class="input-box-small" step="0.1">
+                    </div>
+                </div>
+                
+                <!-- Protein -->
+                <div class="overall">
+                    <div class="leftCol">
+                        <label for="protein">Protein</label><br>
+                        <input type="number" id="protein" name="protein" class="input-box-small" step="0.1">
+                    </div>
+                    <div class="rightCol">
+                        <label for="protein100">Per 100g</label><br>
+                        <input type="number" id="protein100" name="protein_100g" class="input-box-small" step="0.1">
+                    </div>
+                </div>
+                
+                <!-- Fat -->
+                <div class="overall">
+                    <div class="leftCol">
+                        <label for="fat">Fat</label><br>
+                        <input type="number" id="fat" name="fat" class="input-box-small" step="0.1">
+                    </div>
+                    <div class="rightCol">
+                        <label for="fat100">Per 100g</label><br>
+                        <input type="number" id="fat100" name="fat_100g" class="input-box-small" step="0.1">
+                    </div>
+                </div>
+                
+                <!-- Sugar -->
+                <div class="overall">
+                    <div class="leftCol">
+                        <label for="sugar">Sugar</label><br>
+                        <input type="number" id="sugar" name="sugar" class="input-box-small" step="0.1">
+                    </div>
+                    <div class="rightCol">
+                        <label for="sugar100">Per 100g</label><br>
+                        <input type="number" id="sugar100" name="sugar_100g" class="input-box-small" step="0.1">
+                    </div>
+                </div>
+                
+                <!-- Carbohydrates -->
+                <div class="overall">
+                    <div class="leftCol">
+                        <label for="carbs">Carbohydrates</label><br>
+                        <input type="number" id="carbs" name="carbs" class="input-box-small" step="0.1">
+                    </div>
+                    <div class="rightCol">
+                        <label for="carbs100">Per 100g</label><br>
+                        <input type="number" id="carbs100" name="carbs_100g" class="input-box-small" step="0.1">
+                    </div>
+                </div>
+            
+                <input type="submit" value="Save" class="saveButton">
+            </form>
+                       
+        </div>
+        <footer>
+            <p>@uiux_rb</p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/570d6d8240.js" crossorigin="anonymous"></script>
+</body>
+</html>

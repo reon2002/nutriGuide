@@ -1,0 +1,123 @@
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    /* font-variation-settings:
+      "slnt" 0; */
+  }
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+.leftSection{
+    width:50%;
+    background-color:white;
+}
+
+.image_container{
+    /* margin-left:20%; */
+    margin-top:18%;
+    text-align:center;
+}
+
+#login_image{
+    height:350px;
+    width:350px;
+}
+
+#title{
+    margin-top:-20px;
+}
+
+#caption{
+    margin-top:-20px;
+    font-weight:lighter;
+    font-style: italic;
+}
+
+
+.right-section {
+    width:50%;
+    background-color:#74D948;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.text {
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:35px;
+    margin-bottom: 20px;
+}
+
+.input-box{
+    display:flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width:350px;
+    height:30px;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-weight:bold;
+    font-size:20px;
+    border-radius: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    /* margin-top: 10px; */
+}
+
+.button{
+    display:flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width:385px;
+    height:50px;
+    /* height:65px; */
+    padding: 5px 20px 10px 5px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    font-weight:bold;
+    font-size:20px;
+    border-radius: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    transition:0.3s;
+}
+
+.button:hover{
+    color: #74D948;
+    background-color:white;
+    transition:0.3s;
+}
+
+footer{
+    position:absolute;
+    bottom:10px;
+    color: #838282;
+}
+
+footer p span{
+    text-decoration:underline;
+    cursor : pointer;
+}

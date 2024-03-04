@@ -1,0 +1,167 @@
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    /* font-variation-settings:
+      "slnt" 0; */
+  }
+
+body{
+    margin:0;
+    padding:0;
+    background-color:#74D948;
+}
+
+.container{
+    height:auto;
+    margin-bottom:0;
+    padding:0;
+    width:100%;  
+}
+
+.navbar{
+    margin-top:0;
+    width:100%;
+    height:10%;
+    background-color:white;
+    display:flex;
+}
+
+.leftSide{
+    margin-left:40px;
+    justify-content:center;
+    display:flex;
+    align-items:center;
+    text-align:left;
+    margin-right:auto;
+    /* text-align:left; */
+}
+
+.leftSide a{
+    text-decoration:none;
+    color:black;
+}
+
+.title{
+    font-size:30px;
+}
+
+.rightSide{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:40px;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.input-container input[type="text"] {
+    padding-left: 30px;
+}
+  
+.input-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.searchbar{
+    width:250px;
+    height:30px;
+    border-radius:30px;
+    padding-left:150px;
+    font-size:17px;
+    padding-top:2px;
+    background-color:#B6E3A2;
+    border:none;    
+}
+
+
+.addFruit,.userSettings{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:none; 
+    font-size:20px; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+}
+
+.addFruit{
+    background-color:#74D948;
+    margin:auto 10px;
+    font-weight:bolder;
+    font-size:28px;
+}
+
+.userSettings{
+    background-color:lightgray;
+}
+
+/* Upto navbar. Can copy to other files */
+
+.innerContainer{
+    width:80%;
+    margin-left:150px;
+    margin-top:50px;
+    font-size:18px;
+}
+
+.nutritionFacts{
+    padding:20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+}
+
+.editDelete{
+    margin-left:20px;
+    display:flex;
+}
+
+.editDelete a{
+    color:#1403d1;
+    text-decoration: none;
+}
+
+.edit,.delete{
+    height:25px;
+    width:25px;
+    border-radius:50%;
+    background-color:white;
+    padding:8px;
+    text-align:center;
+    color:#1403d1;
+}
+
+.edit{
+    margin-right:10px;
+}
+
+.delete{
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.deleteButton{
+    background-color:white;
+    border:none;
+    color:#1403d1;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.deleteButton:hover{
+    cursor:pointer;
+    background-color:white;
+}

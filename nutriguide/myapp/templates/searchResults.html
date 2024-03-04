@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide - Search</title>
+    <link rel="stylesheet" href="{% static 'css/searchResults.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="leftSide">
+                <a href="{% url 'homepage' %}"><h1 class="title">NutriGuide</h1></a>
+            </div>
+            <div class="rightSide">
+                <!-- <input type="text" class="searchbar" placeholder="Search Fruits"> -->
+                <form action="">
+                    <div class="input-container">
+                        <input type="text" placeholder="Search Fruits" class="searchbar">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #858585;" id="searchicon"></i>
+                    </div>
+                </form>
+                <a href="{% url 'addFruit' %}"  class="addFruit">+</a>
+                <a href="{% url 'login' %}" class="userSettings"><i class="fa-solid fa-power-off"></i></a>
+            </div>
+        </nav>
+
+        <div class="innerContainer">
+            <h2 class="description">{{ fruit }} Nutritional Information :</h2>
+            <div class="nutritionFacts">
+                <p>Calories : {{ calories }}</p>
+                <p>Protein : {{ protein }}</p>
+                <p>Carbs : {{ carbs }}</p>
+                <p>Sugar : {{ sugar }}</p>
+                <p>Fat : {{ fat }}</p>
+            </div>
+            <div class="editDelete">
+                <div class="edit">
+                    <a href="{% url 'editFruit' %}?fruit={{ fruit }}&calories={{ calories }}&protein={{ protein }}&carbs={{ carbs }}&sugar={{ sugar }}&fat={{ fat }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+                <div class="delete">
+                    <form method="post" action="{% url 'deleteFruit' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="deleteButton" cursor="pointer"><i class="fa-solid fa-trash" style="color:#1403d1"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/570d6d8240.js" crossorigin="anonymous"></script>
+</body>
+</html>

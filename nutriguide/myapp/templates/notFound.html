@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide - Search</title>
+    <link rel="stylesheet" href="{% static 'css/searchResults.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="leftSide">
+                <a href="{% url 'homepage' %}"><h1 class="title">NutriGuide</h1></a>
+            </div>
+            <div class="rightSide">
+                <!-- <input type="text" class="searchbar" placeholder="Search Fruits"> -->
+                <form action="">
+                    <div class="input-container">
+                        <input type="text" placeholder="Search Fruits" class="searchbar">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #858585;" id="searchicon"></i>
+                    </div>
+                </form>
+                <a href="{% url 'addFruit' %}"  class="addFruit">+</a>
+                <a href="{% url 'login' %}" class="userSettings"><i class="fa-solid fa-power-off"></i></a>
+            </div>
+        </nav>
+
+        <div class="innerContainer">
+            <h2 class="description">Sorry! Couldn't find any matching results :(</h2>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/570d6d8240.js" crossorigin="anonymous"></script>
+</body>
+</html>
