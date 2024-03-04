@@ -17,7 +17,6 @@
                 <a href="{% url 'homepage' %}"><h1 class="title">NutriGuide</h1></a>
             </div>
             <div class="rightSide">
-                <!-- <input type="text" class="searchbar" placeholder="Search Fruits"> -->
                 <div class="input-container">
                     <input type="text" placeholder="Search Fruits" class="searchbar">
                     <i class="fa-solid fa-magnifying-glass" style="color: #858585;" id="searchicon"></i>
@@ -31,11 +30,6 @@
             <h2 class="description">Edit {{ fruit }} Details</h2>
             <form method="POST">
                 {% csrf_token %}
-                <!-- <label for="name">Name (Must not be changed)</label><br>
-                <input type="text" id="name" name="name" class="input-box" value="{{ fruit }}"><br>
-            
-                <h3 class="nutritionDetails">Nutrition Facts</h3> -->
-                <!-- Calories -->
                 <div class="overall">
                     <div class="leftCol">
                         <label for="cal">Calories</label><br>

@@ -1,10 +1,7 @@
 *{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
     font-style: normal;
-    /* font-variation-settings:
-      "slnt" 0; */
   }
 
 body{
@@ -35,7 +32,6 @@ body{
     align-items:center;
     text-align:left;
     margin-right:auto;
-    /* text-align:left; */
 }
 
 .leftSide a{
@@ -108,7 +104,7 @@ body{
     background-color:lightgray;
 }
 
-/* Upto navbar. Can copy to other files */
+/* css till navbar. Can copy to other files */
 
 .innerContainer{
     width:80%;
